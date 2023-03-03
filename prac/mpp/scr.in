@@ -1,0 +1,8 @@
+-2*x1**4*Piecewise((-x2, Eq(x1, 0)),
+ (log(4*x1*x2 - 1)/(4*x1), True))/3 + x1**3*Piecewise((-x2, Eq(x1, 0)), 
+ (log(4*x1*x2 - 1)/(4*x1), True))/2 - x1**2*(-log(x2)/8 - 1/(16*x2)) - x1**2*log(x2)/8 - x1**2/(24*x2) - x1*(-x2/2 - (1 - 4*x2)/(64*x2**2)) + x1/(32*x2) - x1/(192*x2**2) - Piecewise((I*pi*x2, Eq(x1, 0)),
+  (x2*log(4*x1*x2 - 1) - x2 - log(4*x1*x2 - 1)/(4*x1) + 1/(4*x1), True))/4 + Piecewise((-polylog(2, 4*x1*x2),
+   (Abs(x2) < 1) & (1/Abs(x2) < 1)),
+    (I*pi*log(x2) - polylog(2, 4*x1*x2), Abs(x2) < 1), 
+    (-I*pi*log(1/x2) - polylog(2, 4*x1*x2), 1/Abs(x2) < 1), 
+    (-I*pi*meijerg(((), (1, 1)), ((0, 0), ()), x2) + I*pi*meijerg(((1, 1), ()), ((), (0, 0)), x2) - polylog(2, 4*x1*x2), True))/8 - log(4*x1*x2 - 1)/(128*x2**2) + log(4*x1*x2 - 1)/(384*x2**3) x1*(x2/2 - log(x2)/4) - x1*log(4*x1 - 1/x2)/4 - x2**3*log(4*x1*x2 - 1)/6 + x2**3/18 + x2**2*log(4*x1*x2 - 1)/8 - x2**2/16 + Piecewise((-polylog(2, 4*x1*x2), (Abs(x2) < 1) & (1/Abs(x2) < 1)), (I*pi*log(x2) - polylog(2, 4*x1*x2), Abs(x2) < 1), (-I*pi*log(1/x2) - polylog(2, 4*x1*x2), 1/Abs(x2) < 1), (-I*pi*meijerg(((), (1, 1)), ((0, 0), ()), x2) + I*pi*meijerg(((1, 1), ()), ((), (0, 0)), x2) - polylog(2, 4*x1*x2), True))/8 + log(4*x1*x2 - 1)/(16*x2) + x2**2/(48*x1) - x2/(32*x1) - Piecewise((-x2, Eq(x1, 0)), (log(4*x1*x2 - 1)/(4*x1), True))/(32*x1) + x2/(96*x1**2) + Piecewise((-x2, Eq(x1, 0)), (log(4*x1*x2 - 1)/(4*x1), True))/(96*x1**2)
