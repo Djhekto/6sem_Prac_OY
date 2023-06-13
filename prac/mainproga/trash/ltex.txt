@@ -1,0 +1,6 @@
+\begin{Bmatrix}
+ \dot{x_{1}} = x_{3} \qquad\qquad\qquad\,\,\, \\
+ \dot{x_{2}} = x_{4} \qquad\qquad\qquad\,\,\, \\
+ \dot{x_{3}} = -x_{1}(x_{1}^{2}+x_{2}^{2})^{-3/2} \\
+ \dot{x_{4}} = -x_{2}(x_{1}^{2}+x_{2}^{2})^{-3/2}
+\end{Bmatrix}

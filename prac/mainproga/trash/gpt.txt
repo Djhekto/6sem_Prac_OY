@@ -1,0 +1,86 @@
+Based on the information available, here are 10 links to Python programs using Qt with horizontal layouts:
+
+PyQt5 Horizontal Layout Example - A tutorial on creating a simple PyQt5 application with a horizontal layout using QHBoxLayout.
+
+PyQt5 QHBoxLayout and QVBoxLayout - A basic tutorial on using PyQt's QHBoxLayout and QVBoxLayout for creating horizontal and vertical layouts.
+
+Horizontal Layout with Buttons - An example of using QHBoxLayout to create a horizontal layout with QPushButton objects.
+
+Horizontal Layout in PyQt5 - A PyQt5 example that demonstrates how to create a horizontal layout using QHBoxLayout.
+
+PyQt5 Layout Management - A tutorial on layout management in PyQt5, including QHBoxLayout, QVBoxLayout, and QGridLayout.
+
+Qt for Python: QHBoxLayout - The official documentation for QHBoxLayout in Qt for Python (PySide2) with example code.
+
+PyQt5 QLabel with QHBoxLayout - An example of setting text on a QLabel widget and organizing multiple QLabel widgets in a horizontal layout using QHBoxLayout.
+
+PyQt5 QHBoxLayout and QVBoxLayout Combination - A StackOverflow discussion on how to combine QHBoxLayout and QVBoxLayout to create complex layouts in PyQt5.
+
+Horizontal Box Layout in PyQt5 - A GeeksforGeeks article on creating a horizontal box layout in PyQt5 using QHBoxLayout.
+
+Horizontal Scroll Area in PyQt5 - A tutorial on creating a horizontal scroll area with a QHBoxLayout in PyQt5.
+
+These resources will provide you with examples and guidance on how to create Python programs using Qt with horizontal layouts.
+
+
+
+
+Here are some examples of Python programs using Qt for creating a canvas, painting app, math graphics, and image drawing:
+
+Canvas: Qt5 Canvas Element - Qt 5 introduces the canvas element which can be used for graphics, games, or painting other visual images.
+
+Painting App: Simple Paint App with PyQt5 - This tutorial demonstrates how to create a simple paint app using PyQt5, QPainter, and QImage.
+
+Math Graphics: PyQtGraph - PyQtGraph is a library for creating interactive 2D and 3D plots, graphs, and images using Qt. It is particularly useful for visualizing mathematical functions and scientific data.
+
+Image Drawing: Drawing Images with QPainter - This forum thread covers an example of drawing images using QPainter and QPixmap in a PyQt5 application.
+
+Sources:
+// https://python-forum.io/thread-32499.html  https://doc.qt.io/qt-5/qtcanvas-main-cpp.html  https://www.pyqtgraph.org/  https://pythonprogramminglanguage.com/pyqt5-drawing/
+Qt5 Canvas Element
+Simple Paint App with PyQt5
+PyQtGraph
+Drawing Images with QPainter
+These examples and resources will help you create Python programs using Qt for various drawing and graphics purposes such as canvas creation, painting apps, math graphics, and image drawing.
+
+
+не джипити но сохраню https://stackoverflow.com/questions/24189639/python-pyqt-background-images
+
+
+To display multiple math plots at the same time using Python and Qt, you can use the PyQtGraph library, which is built on top of Qt's native QGraphicsScene. This provides better drawing performance and interactivity. Here's an example of how to create a PyQt application with multiple plots using PyQtGraph:
+
+import sys
+from PyQt5 import QtWidgets
+import pyqtgraph as pg
+
+class MainWindow(QtWidgets.QMainWindow):
+    def __init__(self, *args, **kwargs):
+        super(MainWindow, self).__init__(*args, **kwargs)
+
+        # Create a QWidget to hold the plots
+        self.main_widget = QtWidgets.QWidget()
+        self.setCentralWidget(self.main_widget)
+
+        # Create a layout for the QWidget
+        layout = QtWidgets.QVBoxLayout()
+        self.main_widget.setLayout(layout)
+
+        # Create the first plot
+        self.plot1 = pg.PlotWidget()
+        self.plot1.plot([1, 2, 3, 4, 5], [30, 32, 34, 32, 33])
+        layout.addWidget(self.plot1)
+
+        # Create the second plot
+        self.plot2 = pg.PlotWidget()
+        self.plot2.plot([1, 2, 3, 4, 5], [29, 32, 35, 45, 50])
+        layout.addWidget(self.plot2)
+
+def main():
+    app = QtWidgets.QApplication(sys.argv)
+    main = MainWindow()
+    main.show()
+    sys.exit(app.exec_())
+
+if __name__ == '__main__':
+    main()
+This example creates a PyQt5 application with two separate plots displayed vertically within the same window. The first plot displays the data points (1, 30), (2, 32), (3, 34), (4, 32), and (5, 33), while the second plot displays the data points (1, 29), (2, 32), (3, 35), (4, 45), and (5, 50). You can customize the plots using the various options provided by the PyQtGraph library.
